@@ -6,15 +6,16 @@ import { Button, ButtonGroup } from '@material-ui/core';
 const StockSummary = () => {
   const symbol = window.location.hash.slice(1);
 
-  const d = new Date();
-  const today = d.toISOString().split('T')[0];
-  const lastMonth = new Date(d.setMonth(d.getMonth() - 1)).toISOString().split('T')[0];
-
   const apiKey = 'demo';
   // '117f1a5053dbc179942033ea60b80c58';
 
   const [data, setChartData] = useState();
+  const [dateToday, setDateToday] = useState('');
+  const [dateRange, setDateRange] = useState('');
 
+  useEffect(() => {
+    setMonth();
+  }, []);
 
   useEffect(() => {
     const fetchHistoricalData = async() => {
@@ -22,8 +23,8 @@ const StockSummary = () => {
       url.search = new URLSearchParams({
         serietype: 'line',
         apikey: apiKey,
-        from: lastMonth,
-        to: today
+        from: dateRange,
+        to: dateToday
       });
   
       try {
@@ -37,16 +38,47 @@ const StockSummary = () => {
     };
     
     fetchHistoricalData();
-  }, []);
+  }, [symbol, dateToday, dateRange]);
 
+  const setMonth = () => {
+    const d = new Date();
+    const today = d.toISOString().split('T')[0];
+    setDateToday(today);
+    const lastMonth = new Date(d.setMonth(d.getMonth() - 1)).toISOString().split('T')[0];
+    setDateRange(lastMonth);
+  }
+
+  const setSixMonth = () => {
+    const d = new Date();
+    const today = d.toISOString().split('T')[0];
+    setDateToday(today);
+    const sixMonths = new Date(d.setMonth(d.getMonth() - 6)).toISOString().split('T')[0];
+    setDateRange(sixMonths);
+  }
+
+  const setOneYear = () => {
+    const d = new Date();
+    const today = d.toISOString().split('T')[0];
+    setDateToday(today);
+    const oneYear = new Date(d.setFullYear(d.getFullYear() - 1)).toISOString().split('T')[0];
+    setDateRange(oneYear);
+  }
+
+  const setThreeYear = () => {
+    const d = new Date();
+    const today = d.toISOString().split('T')[0];
+    setDateToday(today);
+    const threeYears = new Date(d.setFullYear(d.getFullYear() - 3)).toISOString().split('T')[0];
+    setDateRange(threeYears);
+  }
 
   return (
     <div className={styles.stockChart}>
-      <ButtonGroup color="primary" aria-label="outlined primary button group">
-        <Button>1M</Button>
-        <Button>6M</Button>
-        <Button>1Y</Button>
-        <Button>3Y</Button>
+      <ButtonGroup className={styles.Button} color="primary" aria-label="outlined primary button group">
+        <Button onClick={setMonth}>1M</Button>
+        <Button onClick={setSixMonth}>6M</Button>
+        <Button onClick={setOneYear}>1Y</Button>
+        <Button onClick={setThreeYear}>3Y</Button>
       </ButtonGroup>
       <VictoryChart domainPadding={20} padding={50}>
         <VictoryAxis

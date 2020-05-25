@@ -36,7 +36,7 @@ const StockSummary = () => {
     };
     
     fetchStockSummary();
-  }, []);
+  }, [symbol]);
 
   const changesClass = stockChanges > 0 ? styles.green : styles.red;
 
@@ -51,9 +51,7 @@ const StockSummary = () => {
               <div className={styles.stockPrice}>{PriceFormat(stockPrice)}</div>
               <div className={`${styles.stockChanges} ${changesClass}`}>{stockChanges > 0 ? '+' : ''}{stockChanges}</div>
             </div>
-            <div className={styles.stockChart}>
               <StockChart />
-            </div>
           </div>
         : ''}
     </div>

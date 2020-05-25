@@ -59,7 +59,13 @@
   background-color: #ffdbdb;
 }
 
-.MuiButtonGroup-root {
+.stockChart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.Button {
   align-self: center;
   margin-top: 20px;
 }
