@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Take-Stock/static/css/main.3d2039de.chunk.css",
+    "main.js": "/Take-Stock/static/js/main.f79ad49e.chunk.js",
+    "main.js.map": "/Take-Stock/static/js/main.f79ad49e.chunk.js.map",
+    "runtime-main.js": "/Take-Stock/static/js/runtime-main.df4dac86.js",
+    "runtime-main.js.map": "/Take-Stock/static/js/runtime-main.df4dac86.js.map",
+    "static/js/2.93ed166c.chunk.js": "/Take-Stock/static/js/2.93ed166c.chunk.js",
+    "static/js/2.93ed166c.chunk.js.map": "/Take-Stock/static/js/2.93ed166c.chunk.js.map",
+    "index.html": "/Take-Stock/index.html",
+    "precache-manifest.75183a6fba64ba374b96a7d1f4668f34.js": "/Take-Stock/precache-manifest.75183a6fba64ba374b96a7d1f4668f34.js",
+    "service-worker.js": "/Take-Stock/service-worker.js",
+    "static/css/main.3d2039de.chunk.css.map": "/Take-Stock/static/css/main.3d2039de.chunk.css.map",
+    "static/js/2.93ed166c.chunk.js.LICENSE.txt": "/Take-Stock/static/js/2.93ed166c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.df4dac86.js",
+    "static/js/2.93ed166c.chunk.js",
+    "static/css/main.3d2039de.chunk.css",
+    "static/js/main.f79ad49e.chunk.js"
+  ]
+}
