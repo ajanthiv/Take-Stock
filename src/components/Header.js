@@ -23,7 +23,7 @@ const Header = () => {
       </div>
       <Route exact path="/Take-Stock/" component={Home} />
       <Route exact path="/Take-Stock/search" component={SearchResults} />
-      <Route path="/Take-Stock//summary" component={StockSummary} />
+      <Route path="/Take-Stock/summary" component={StockSummary} />
     </Router>
   )
 }

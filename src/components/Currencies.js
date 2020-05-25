@@ -16,18 +16,18 @@ const Currencies = () => {
 
   useEffect(() => {
     const fetchCurrencies = async() => {
-      const url = new URL('http://api.currencylayer.com/live');
-      const apiKey = '65a2648aac181c16f87fda39c239464f';
+      const apiKey = '1514441fff1dafc6155aa57c';
+      const url = new URL(`https://v6.exchangerate-api.com/v6/${apiKey}/latest/USD`);
 
-      url.search = new URLSearchParams({
-        access_key: apiKey,
-        currencies: 'CAD,AUD,GBP,CNY,JPY,INR,LKR'
-      });
+      // url.search = new URLSearchParams({
+      //   access_key: apiKey,
+      //   currencies: 'CAD,AUD,GBP,CNY,JPY,INR,LKR'
+      // });
   
       try {
         const response = await fetch(url);
         const resposeData = await response.json();
-        setCurrencies(resposeData.quotes);
+        setCurrencies(resposeData.conversion_rates);
       } catch(err) {
         console.log(err)
       }
@@ -51,10 +51,9 @@ const Currencies = () => {
               </TableHead>
               <TableBody>
                 { Object.entries(currencies).map((currency, index) => {
-                  const countries = currency[0].match(/.{1,3}/g);
                   return(
                     <TableRow key={`currency-${index}`}>
-                      <TableCell>{`${countries[0]}/${countries[1]}`}</TableCell>
+                      <TableCell>{`USD/${currency[0]}`}</TableCell>
                       <TableCell>{currency[1]}</TableCell>
                     </TableRow>
                   )
