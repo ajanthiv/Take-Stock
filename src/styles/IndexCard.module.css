@@ -1,0 +1,42 @@
+.indexCard {
+  padding: 1em .8em;
+  margin-right: 3%;
+  width: 150px;
+  height: 80px;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 1.05em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.05);
+  color: #3a3a3a;
+}
+
+.indexCard:last-child {
+  margin-right: 0;
+}
+
+.indexName {
+  font-weight: 900;
+  height: 2em;
+  line-height: 1em;
+  font-size: 0.75rem;
+  padding-bottom: 10px;
+}
+
+.indexPrice {
+  font-size: 0.9rem;
+}
+
+.indexChange {
+  font-size: 0.75rem;
+}
+
+.green {
+  color: #2ecc71;
+}
+
+.red {
+  color: #e74c3c;
+}

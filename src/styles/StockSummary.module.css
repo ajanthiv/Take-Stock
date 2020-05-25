@@ -1,0 +1,65 @@
+.stockSummary {
+  position: relative;
+  border-radius: 5px;
+  max-width: 1400px;
+  width: 75%;
+  padding: 3% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.stockSummary h1 {
+  font-weight: 500;
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 15px;
+  margin-top: 0;
+}
+
+.stockInfo {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.stockName {
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding-right: 5px;
+}
+
+.stockSymbol {
+  font-size: 1.25rem;
+  font-weight: 400;
+  padding-right: 10px;
+}
+
+.stockPrice {
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding-right: 10px;
+}
+
+.stockChanges {
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+
+.green {
+  color: #2ecc71;
+  background-color: #d6ffef;
+}
+
+.red {
+  color: #e74c3c;
+  background-color: #ffdbdb;
+}
+
+.MuiButtonGroup-root {
+  align-self: center;
+  margin-top: 20px;
+}

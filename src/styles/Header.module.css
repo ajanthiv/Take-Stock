@@ -1,0 +1,30 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 5%;
+  background-color: #fff;
+  color: #eaeaea;
+  border-bottom: 1px solid #f7f7f7;
+  margin: auto;
+}
+
+.logo {
+  color: #5f74e6;
+  font-size: 2rem;
+  font-weight: 900;
+  text-decoration: none;
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo > svg {
+  margin-left: 5px;
+}

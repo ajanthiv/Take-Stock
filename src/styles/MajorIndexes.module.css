@@ -1,0 +1,22 @@
+.majorIndexes {
+  position: relative;
+  border-radius: 5px;
+  max-width: 1400px;
+  padding: 3% 5%;
+}
+
+.majorIndexes h2 {
+  font-size: 1.5rem;
+  font-weight: 900!important;
+  color: #3a3a3a;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+.majorIndexesList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 0;
+}
