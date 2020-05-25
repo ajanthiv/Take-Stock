@@ -5,9 +5,6 @@ import { SearchRounded } from '@material-ui/icons';
 import { Redirect } from "react-router-dom";
 
 const Search = () => { 
-  const apiKey = 'demo';
-  // '117f1a5053dbc179942033ea60b80c58';
-
   const [stock, setStock] = useState('');
   const [queryStock, setQueryStock] = useState('');
   const [searchResults, setSearchResults] = useState('');
@@ -16,6 +13,8 @@ const Search = () => {
   useEffect(() => {
     const fetchSearch= async() => {
       const url = new URL('https://financialmodelingprep.com/api/v3/search');
+      const apiKey = '4f1ab515aa57b12280886be979ccf698';
+
       url.search = new URLSearchParams({
         apikey: apiKey,
         query: queryStock,

@@ -3,25 +3,21 @@ import IndexCard from './IndexCard';
 import styles from '../styles/MajorIndexes.module.css';
 
 const MajorIndexes = () => { 
-  const apiKey = 'demo';
+  const apiKey = '4f1ab515aa57b12280886be979ccf698';
   // '117f1a5053dbc179942033ea60b80c58';
   const [majorIndex, setMajorIndex] = useState('');
 
   useEffect(() => {
     const fetchMajorIndexes = async() => {
-      const url = new URL('https://financialmodelingprep.com/api/v3/search');
-      // https://financialmodelingprep.com/api/v3/majors-indexes
+      const url = new URL('https://financialmodelingprep.com/api/v3/majors-indexes');
       url.search = new URLSearchParams({
-        apikey: apiKey,
-        query: 'VFV',
-        limit: 10
+        apikey: apiKey
       });
   
       try {
         const response = await fetch(url);
         const majorIndexesData = await response.json();
-        setMajorIndex(majorIndexesData);
-        // majorIndexesData.majorIndexesList
+        setMajorIndex(majorIndexesData.majorIndexesList);
       } catch(err) {
         console.log(err)
       }
@@ -36,7 +32,7 @@ const MajorIndexes = () => {
       <div className={styles.majorIndexesList}>
         {
           majorIndex.length ? majorIndex.map((marketIndex, index) => <IndexCard indexCard={marketIndex} key={`majorIndex-${index}`} />)
-          : ''
+          : <div>Major Indexes Unvailable</div>
         }
       </div>
     </div>

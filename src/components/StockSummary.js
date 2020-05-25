@@ -5,8 +5,6 @@ import StockChart from './StockChart';
 
 const StockSummary = () => {
   const symbol = window.location.hash.slice(1);
-  const apiKey = 'demo';
-  // '117f1a5053dbc179942033ea60b80c58';
 
   const [stockName, setStockName] = useState('');
   const [stockSymbol, setStockSymbol] = useState('');
@@ -17,6 +15,7 @@ const StockSummary = () => {
   useEffect(() => {
     const fetchStockSummary = async() => {
       const url = new URL(`https://financialmodelingprep.com/api/v3/profile/${symbol}`);
+      const apiKey = '4f1ab515aa57b12280886be979ccf698';
       url.search = new URLSearchParams({
         apikey: apiKey
       });

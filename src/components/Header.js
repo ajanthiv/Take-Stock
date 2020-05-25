@@ -19,7 +19,6 @@ const Header = () => {
         <NavLink exact to="/" className={styles.logo}>
           Take Stock <ShowChartRounded color="primary" style={{ fontSize: 50 }} />
         </NavLink>
-        {/* <NavLink exact to="/search">SearchBar</NavLink> */}
         <SearchBar />
       </div>
       <Route exact path="/" component={Home} />
