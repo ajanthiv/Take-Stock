@@ -56,7 +56,7 @@ const Search = () => {
       </form>
       {searchResults.length > 0 && 
         <Redirect to={{
-            pathname: '/search',
+            pathname: '/Take-Stock/search',
             state: { query: queryStock, results: searchResults }
         }}/>
       }

@@ -16,14 +16,14 @@ const Header = () => {
   return (
     <Router>
       <div className={styles.header}>
-        <NavLink exact to="/" className={styles.logo}>
+        <NavLink exact to="/Take-Stock/" className={styles.logo}>
           Take Stock <ShowChartRounded color="primary" style={{ fontSize: 50 }} />
         </NavLink>
         <SearchBar />
       </div>
-      <Route exact path="/" component={Home} />
-      <Route exact path="/search" component={SearchResults} />
-      <Route path="/summary" component={StockSummary} />
+      <Route exact path="/Take-Stock/" component={Home} />
+      <Route exact path="/Take-Stock/search" component={SearchResults} />
+      <Route path="/Take-Stock//summary" component={StockSummary} />
     </Router>
   )
 }
